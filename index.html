@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance Gréement — Gréeur à Pégomas, bassin cannois</title>
+<meta name="description" content="Performance Gréement, gréeur dans le bassin cannois depuis plus de 20 ans : gréement dormant, gréement courant, mâts et bômes, enrouleurs, super yachts. De Menton à Marseille, en France et à l'étranger.">
+<meta property="og:title" content="Performance Gréement — Gréeur, bassin cannois">
+<meta property="og:description" content="Gréement dormant, gréement courant, mâts et bômes, enrouleurs. Depuis plus de 20 ans, de Menton à Marseille.">
+<meta property="og:image" content="images/yacht-2.jpg">
+<meta name="theme-color" content="#0a1a2f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a1a2f'/%3E%3Cpath d='M32 8 L32 52 M32 10 L14 48 L32 48 M32 14 L50 48 L32 48' stroke='%23fff' stroke-width='3' fill='none' stroke-linejoin='round'/%3E%3Cpath d='M10 52 Q32 60 54 52' stroke='%23e30613' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:ital,wght@0,600;0,700;1,700;1,800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Performance Gréement",
+  "description": "Gréeur : gréement dormant, gréement courant, mâts et bômes, enrouleurs, super yachts.",
+  "url": "http://www.performance-greement.fr",
+  "telephone": "+33493776562",
+  "email": "denis@performance-greement.fr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "462 Chemin de l'Hôpital",
+    "postalCode": "06580",
+    "addressLocality": "Pégomas",
+    "addressCountry": "FR"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.5862674, "longitude": 6.9293634 },
+  "areaServed": "Côte d'Azur, de Menton à Marseille"
+}
+</script>
+
+<style>
+  :root {
+    --navy: #0a1a2f;
+    --navy-2: #102847;
+    --sea: #1e4f86;
+    --red: #e30613;
+    --red-dark: #b80510;
+    --sand: #f6f3ee;
+    --white: #ffffff;
+    --ink: #142235;
+    --muted: #5b6878;
+    --line: #e3e6ea;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(10, 26, 47, .08);
+    --display: "Barlow Condensed", "Arial Narrow", sans-serif;
+    --body: "Barlow", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --header-h: 72px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+  body {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+
+  .container { width: min(1160px, 100% - 32px); margin-inline: auto; }
+
+  h1, h2, h3 {
+    font-family: var(--display);
+    line-height: 1.05;
+    margin: 0;
+    letter-spacing: .005em;
+  }
+  h2 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 700; font-style: italic; text-transform: uppercase; }
+  h3 { font-size: 1.45rem; font-weight: 700; text-transform: uppercase; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 600; font-size: .82rem; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 14px;
+  }
+  .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+
+  .lead { font-size: 1.15rem; color: var(--muted); max-width: 60ch; }
+
+  section { padding: clamp(64px, 10vw, 120px) 0; }
+
+  /* ---------- Boutons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 14px 24px; border-radius: 999px;
+    font-weight: 600; font-size: 1rem; text-decoration: none;
+    transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+    border: 2px solid transparent; white-space: nowrap;
+  }
+  .btn svg { width: 18px; height: 18px; flex: none; }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-red { background: var(--red); color: var(--white); }
+  .btn-red:hover { background: var(--red-dark); }
+  .btn-ghost { border-color: rgba(255,255,255,.45); color: var(--white); }
+  .btn-ghost:hover { border-color: var(--white); background: rgba(255,255,255,.08); }
+  .btn-dark { background: var(--navy); color: var(--white); }
+  .btn-dark:hover { background: var(--navy-2); }
+
+  /* ---------- En-tête ---------- */
+  .header {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    height: var(--header-h);
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: border-color .3s, box-shadow .3s;
+  }
+  .header.scrolled { border-color: var(--line); box-shadow: 0 4px 20px rgba(10,26,47,.06); }
+  .header .container { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .logo img { height: 46px; width: auto; }
+  .nav { display: flex; align-items: center; gap: 30px; }
+  .nav a { text-decoration: none; font-weight: 500; color: var(--ink); position: relative; }
+  .nav a:not(.btn)::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px;
+    background: var(--red); transform: scaleX(0); transform-origin: left; transition: transform .25s;
+  }
+  .nav a:not(.btn):hover::after { transform: scaleX(1); }
+  .nav .btn { padding: 10px 18px; color: var(--white); }
+  .burger {
+    display: none; background: none; border: 0; padding: 8px; margin-right: -8px; cursor: pointer; color: var(--ink);
+  }
+  .burger svg { width: 28px; height: 28px; }
+
+  @media (max-width: 860px) {
+    .burger { display: block; }
+    .nav {
+      position: fixed; top: var(--header-h); left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--white); border-bottom: 1px solid var(--line);
+      padding: 8px 16px 20px;
+      transform: translateY(-12px); opacity: 0; pointer-events: none;
+      transition: transform .25s, opacity .25s;
+      box-shadow: 0 16px 30px rgba(10,26,47,.08);
+    }
+    .nav.open { transform: none; opacity: 1; pointer-events: auto; }
+    .nav a:not(.btn) { padding: 14px 4px; border-bottom: 1px solid var(--line); font-size: 1.1rem; }
+    .nav a:not(.btn)::after { display: none; }
+    .nav .btn { margin-top: 16px; padding: 14px; }
+    .logo img { height: 40px; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; overflow: hidden;
+    background:
+      radial-gradient(1200px 600px at 85% 10%, rgba(30,79,134,.55), transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, var(--navy-2) 100%);
+    color: var(--white);
+    padding: calc(var(--header-h) + clamp(60px, 10vw, 120px)) 0 clamp(120px, 16vw, 200px);
+  }
+  .hero-rig {
+    position: absolute; right: max(-60px, calc(50% - 640px)); bottom: 40px;
+    height: 112%; width: auto; max-width: none;
+    filter: invert(1); mix-blend-mode: screen; opacity: .22;
+    pointer-events: none;
+  }
+  .hero .container { position: relative; z-index: 1; }
+  .hero .eyebrow { color: #ff5a63; }
+  .hero h1 {
+    font-size: clamp(2.8rem, 8vw, 5.6rem);
+    font-weight: 800; font-style: italic; text-transform: uppercase;
+    max-width: 13ch;
+  }
+  .hero h1 em { font-style: italic; color: var(--red); }
+  .hero p { font-size: clamp(1.05rem, 2vw, 1.25rem); color: rgba(255,255,255,.8); max-width: 54ch; margin: 24px 0 36px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+
+  .hero-tags {
+    display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 48px;
+    font-size: .88rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.6);
+  }
+  .hero-tags span { display: inline-flex; align-items: center; gap: 22px; }
+  .hero-tags span:not(:last-child)::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--red); }
+  @media (max-width: 560px) { .hero-tags { display: none; } }
+
+  .waves { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(60px, 9vw, 120px); }
+
+  /* ---------- Chiffres ---------- */
+  .facts { padding: 0; margin-top: clamp(-80px, -6vw, -40px); position: relative; z-index: 2; }
+  .facts-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    background: var(--white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(10,26,47,.12);
+    overflow: hidden;
+  }
+  .fact { padding: 30px 32px; border-right: 1px solid var(--line); }
+  .fact:last-child { border-right: 0; }
+  .fact strong { display: block; font-family: var(--display); font-style: italic; font-size: 2.4rem; font-weight: 800; color: var(--navy); line-height: 1; }
+  .fact strong span { color: var(--red); }
+  .fact p { margin: 8px 0 0; color: var(--muted); font-size: .98rem; }
+  @media (max-width: 760px) {
+    .facts-grid { grid-template-columns: 1fr; }
+    .fact { border-right: 0; border-bottom: 1px solid var(--line); padding: 22px 24px; }
+    .fact:last-child { border-bottom: 0; }
+  }
+
+  /* ---------- Savoir-faire ---------- */
+  .section-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 60px; align-items: end; margin-bottom: 56px; }
+  .section-head .lead { margin: 0; }
+  @media (max-width: 860px) { .section-head { grid-template-columns: 1fr; margin-bottom: 40px; } }
+
+  .services { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  @media (max-width: 980px) { .services { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 620px) { .services { grid-template-columns: 1fr; } }
+
+  .card {
+    position: relative; padding: 32px 28px 30px;
+    background: var(--white); border: 1px solid var(--line); border-radius: var(--radius);
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+  .card .icon {
+    width: 56px; height: 56px; border-radius: 12px; margin-bottom: 22px;
+    display: grid; place-items: center; background: var(--sand); color: var(--navy);
+  }
+  .card .icon svg { width: 30px; height: 30px; }
+  .card h3 { margin-bottom: 10px; }
+  .card p { margin: 0; color: var(--muted); }
+  .card .num {
+    position: absolute; top: 24px; right: 26px;
+    font-family: var(--display); font-weight: 700; font-style: italic; font-size: 1rem; color: #c2c8d0;
+  }
+
+  .supplies {
+    margin-top: 40px; padding: 22px 28px; border-radius: var(--radius);
+    background: var(--sand); display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px;
+  }
+  .supplies b { font-family: var(--display); font-style: italic; text-transform: uppercase; font-size: 1.2rem; color: var(--navy); margin-right: 6px; }
+  .supplies span { font-weight: 500; display: inline-flex; align-items: center; gap: 24px; }
+  .supplies span:not(:last-child)::after { content: "/"; color: var(--red); font-weight: 600; }
+
+  /* ---------- Super yachts ---------- */
+  .yachts { background: var(--navy); color: var(--white); overflow: hidden; }
+  .yachts-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; }
+  .yachts .lead { color: rgba(255,255,255,.75); margin: 22px 0 0; }
+  .yachts ul { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 14px; }
+  .yachts li { display: flex; gap: 14px; align-items: flex-start; color: rgba(255,255,255,.88); }
+  .yachts li svg { width: 22px; height: 22px; flex: none; color: var(--red); margin-top: 3px; }
+  .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .photo { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; background: var(--navy-2); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.45); }
+  .photo:nth-child(2) { margin-top: 56px; }
+  .photo:first-child img { transform: scale(1.4); transform-origin: 50% 70%; }
+  @media (max-width: 900px) {
+    .yachts-grid { grid-template-columns: 1fr; gap: 44px; }
+    .photo { aspect-ratio: 4 / 4.4; }
+    .photo:nth-child(2) { margin-top: 32px; }
+  }
+
+  /* ---------- Atelier ---------- */
+  .atelier-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
+  .atelier-img { position: relative; }
+  .atelier-img img { border-radius: var(--radius); width: 100%; aspect-ratio: 4 / 3; object-fit: cover; box-shadow: var(--shadow); }
+  .atelier-img .badge {
+    position: absolute; left: -18px; bottom: -22px;
+    background: var(--red); color: var(--white); border-radius: 12px; padding: 16px 20px;
+    font-family: var(--display); font-style: italic; font-weight: 700; text-transform: uppercase; line-height: 1.1;
+    box-shadow: 0 12px 30px rgba(227,6,19,.3);
+  }
+  .atelier-img .badge strong { display: block; font-size: 2rem; }
+  .atelier p { color: var(--muted); }
+  .atelier .lead { color: var(--ink); margin-top: 22px; }
+
+  .zone {
+    margin-top: 32px; padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .zone-label { font-size: .8rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .zone-line { display: flex; align-items: center; gap: 14px; margin-top: 12px; font-family: var(--display); font-style: italic; font-weight: 700; font-size: 1.4rem; text-transform: uppercase; color: var(--navy); }
+  .zone-line i { flex: 1; height: 2px; background: repeating-linear-gradient(90deg, var(--red) 0 8px, transparent 8px 14px); position: relative; }
+  .zone-line i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 12px; border-radius: 50%; background: var(--red); transform: translate(-50%, -50%); box-shadow: 0 0 0 5px rgba(227,6,19,.18); }
+  .zone small { display: block; margin-top: 10px; color: var(--muted); font-size: .95rem; }
+
+  @media (max-width: 900px) {
+    .atelier-grid { grid-template-columns: 1fr; gap: 56px; }
+    .atelier-img .badge { left: 12px; }
+  }
+
+  /* ---------- Marques ---------- */
+  .brands { background: var(--sand); padding: clamp(56px, 8vw, 88px) 0; }
+  .brands h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); text-align: center; }
+  .brands .lead { text-align: center; margin: 12px auto 40px; }
+  .brand-list {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: #ddd7cd; border: 1px solid #ddd7cd; border-radius: var(--radius); overflow: hidden;
+  }
+  .brand-list li {
+    list-style: none; background: var(--sand); padding: 26px 12px; text-align: center;
+    font-family: var(--display); font-weight: 700; font-style: italic; font-size: 1.35rem; text-transform: uppercase;
+    color: #3b4757; letter-spacing: .02em; transition: color .2s, background .2s;
+  }
+  .brand-list li:hover { color: var(--red); background: var(--white); }
+  .brand-list { padding: 0; margin: 0; }
+  @media (max-width: 720px) { .brand-list { grid-template-columns: repeat(2, 1fr); } .brand-list li { font-size: 1.15rem; padding: 20px 8px; } }
+
+  /* ---------- Contact ---------- */
+  .contact { background: linear-gradient(180deg, var(--navy-2), var(--navy)); color: var(--white); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: stretch; }
+  .contact .lead { color: rgba(255,255,255,.75); margin: 20px 0 36px; }
+  .contact-list { display: grid; gap: 14px; }
+  .contact-item {
+    display: flex; align-items: center; gap: 18px; padding: 18px 20px;
+    border: 1px solid rgba(255,255,255,.14); border-radius: var(--radius);
+    text-decoration: none; transition: background .2s, border-color .2s;
+  }
+  a.contact-item:hover { background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.3); }
+  .contact-item .ic { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--red); flex: none; }
+  .contact-item .ic svg { width: 20px; height: 20px; }
+  .contact-item small { display: block; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.55); }
+  .contact-item span { font-size: 1.12rem; font-weight: 500; word-break: break-word; }
+  .map-col { display: flex; flex-direction: column; }
+  .map {
+    flex: 1;
+    border-radius: var(--radius); overflow: hidden; min-height: 380px; background: var(--navy-2);
+    border: 1px solid rgba(255,255,255,.14); position: relative;
+  }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: saturate(.85); }
+  .map-link { display: inline-flex; margin-top: 14px; color: rgba(255,255,255,.75); font-size: .95rem; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 40px; } .map { min-height: 300px; } }
+
+  /* ---------- Pied de page ---------- */
+  .footer { background: var(--navy); color: rgba(255,255,255,.55); padding: 28px 0; border-top: 1px solid rgba(255,255,255,.08); font-size: .92rem; }
+  .footer .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px 24px; }
+  .footer a { text-decoration: none; }
+  .footer a:hover { color: var(--white); }
+
+  /* ---------- Bouton d'appel mobile ---------- */
+  .call-fab {
+    display: none; position: fixed; right: 16px; bottom: 16px; z-index: 40;
+    width: 58px; height: 58px; border-radius: 50%; background: var(--red); color: var(--white);
+    place-items: center; box-shadow: 0 10px 24px rgba(227,6,19,.4);
+    opacity: 0; transform: translateY(16px); transition: opacity .3s, transform .3s; pointer-events: none;
+  }
+  .call-fab svg { width: 24px; height: 24px; }
+  .call-fab.show { opacity: 1; transform: none; pointer-events: auto; }
+  @media (max-width: 860px) { .call-fab { display: grid; } }
+
+  /* ---------- Apparition au défilement ---------- */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ EN-TÊTE ============ -->
+<header class="header" id="top">
+  <div class="container">
+    <a href="#accueil" class="logo" aria-label="Performance Gréement — retour en haut">
+      <img src="logo.jpg" alt="Performance Gréement" width="1024" height="544">
+    </a>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#savoir-faire">Savoir-faire</a>
+      <a href="#super-yachts">Super yachts</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#marques">Marques</a>
+      <a href="#contact" class="btn btn-red">Nous contacter</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ ACCUEIL ============ -->
+<section class="hero" id="accueil">
+  <img class="hero-rig" src="images/plan-greement.png" alt="" aria-hidden="true">
+  <div class="container">
+    <div class="eyebrow">Gréeur · Bassin cannois</div>
+    <h1>Votre gréement entre de <em>bonnes mains</em></h1>
+    <p>Depuis plus de 20 ans, Performance Gréement réalise gréements dormants, gréements courants et tous travaux d'installation et de montage sur votre bateau.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-red">
+        Demander un devis
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="tel:+33493776562" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+        04 93 77 65 62
+      </a>
+    </div>
+    <div class="hero-tags">
+      <span>Gréement dormant</span><span>Gréement courant</span><span>Mâts &amp; bômes</span><span>Enrouleurs</span>
+    </div>
+  </div>
+  <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path fill="rgba(255,255,255,.08)" d="M0 60 C 240 20 480 100 720 70 S 1200 20 1440 55 V120 H0z"/>
+    <path fill="#ffffff" d="M0 85 C 260 50 520 120 780 92 S 1240 55 1440 80 V120 H0z"/>
+  </svg>
+</section>
+
+<!-- ============ CHIFFRES ============ -->
+<section class="facts" aria-label="En bref">
+  <div class="container">
+    <div class="facts-grid reveal">
+      <div class="fact"><strong>20<span>+</span> ans</strong><p>d'expérience dans le bassin cannois</p></div>
+      <div class="fact"><strong>Menton <span>→</span> Marseille</strong><p>notre secteur d'intervention habituel</p></div>
+      <div class="fact"><strong>France <span>&amp;</span> étranger</strong><p>nous nous déplaçons partout</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAVOIR-FAIRE ============ -->
+<section id="savoir-faire">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">Notre savoir-faire</div>
+        <h2>Du câble à la tête de mât</h2>
+      </div>
+      <p class="lead">Croisière, course ou grande unité : nous intervenons sur l'ensemble du gréement, en atelier comme à quai.</p>
+    </div>
+
+    <div class="services">
+      <article class="card reveal">
+        <span class="num">01</span>
+        <div class="icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3v26M16 4 5 27M16 4l11 23"/><circle cx="16" cy="3.5" r="1.5"/><path d="M3 28h26"/></svg>
+        </div>
+        <h3>Gréement dormant</h3>
+        <p>Haubans, étais et bas-haubans : contrôle, remplacement et sertissage de votre gréement inox ou textile.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">02</span>
+        <div class="icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 26c6 0 6-8 12-8s6-8 10-8"/><path d="M4 22c6 0 6-8 12-8s6-8 10-8"/><circle cx="26" cy="7" r="3"/></svg>
+        </div>
+        <h3>Gréement courant</h3>
+        <p>Drisses, écoutes et manœuvres sur mesure : cordages, épissures et finitions adaptés à votre programme.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">03</span>
+        <div class="icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v26"/><path d="M12 22h17"/><path d="M12 10l6 0M12 16h4"/><rect x="10" y="3" width="4" height="26" rx="1"/></svg>
+        </div>
+        <h3>Mâts &amp; bômes</h3>
+        <p>Démâtage, contrôle, réparation et remâtage. Accastillage de mât, neuf ou en rénovation.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">04</span>
+        <div class="icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="16" r="4"/><path d="M16 6v6M16 20v6M6 16h6M20 16h6"/></svg>
+        </div>
+        <h3>Enrouleurs</h3>
+        <p>Fourniture, installation et révision d'enrouleurs de génois et de grand-voile.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">05</span>
+        <div class="icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3v19M17 5 6 21h11M17 7l9 14h-9"/><path d="M3 24h26l-3 5H6z"/></svg>
+        </div>
+        <h3>Super yachts</h3>
+        <p>Interventions sur grandes unités, avec la rigueur et la réactivité qu'elles exigent.</p>
+      </article>
+
+      <article class="card reveal">
+        <span class="num">06</span>
+        <div class="icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4a6 6 0 0 0-5.6 8.2L4.6 22a2.4 2.4 0 0 0 3.4 3.4l9.8-9.8A6 6 0 0 0 26 10l-3.6 3.6-3.4-.6-.6-3.4L22 6a6 6 0 0 0-2-2z"/></svg>
+        </div>
+        <h3>Installation &amp; montage</h3>
+        <p>Accastillage, poulies, rails, winchs… tous travaux d'installation et de montage à bord.</p>
+      </article>
+    </div>
+
+    <div class="supplies reveal">
+      <b>À l'atelier</b>
+      <span>Cordages</span><span>Câbles</span><span>Sertissages</span><span>Mâts</span><span>Enrouleurs</span><span>Accastillage</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SUPER YACHTS ============ -->
+<section class="yachts" id="super-yachts">
+  <div class="container yachts-grid">
+    <div class="reveal">
+      <div class="eyebrow">Grandes unités</div>
+      <h2>Super yachts</h2>
+      <p class="lead">Des voiliers de croisière aux super yachts de la Riviera, nous apportons le même soin à chaque gréement.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Interventions à quai, au port d'attache du bateau</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Gréement dormant et courant, enrouleurs, accastillage</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>Déplacements partout en France et à l'étranger</li>
+      </ul>
+      <a href="#contact" class="btn btn-red" style="margin-top:36px">Parlons de votre projet</a>
+    </div>
+    <div class="photos reveal">
+      <div class="photo"><img src="images/yacht-1.jpg" alt="Grand voilier sous voiles en Méditerranée" loading="lazy"></div>
+      <div class="photo"><img src="images/yacht-2.jpg" alt="Super yacht à voile vu du ciel" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ATELIER ============ -->
+<section class="atelier" id="atelier">
+  <div class="container atelier-grid">
+    <div class="atelier-img reveal">
+      <img src="images/atelier.jpg" alt="L'atelier Performance Gréement à Pégomas" loading="lazy">
+      <div class="badge"><strong>20+ ans</strong>dans le bassin cannois</div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow">L'atelier</div>
+      <h2>Implantés à Pégomas</h2>
+      <p class="lead">Implantée dans le bassin cannois depuis plus de 20 ans, Performance Gréement est spécialisée dans la réalisation des gréements dormants, gréements courants et tous travaux d'installation et montage sur votre bateau.</p>
+      <p>Notre atelier, à quelques minutes des ports de Cannes et de Mandelieu-la-Napoule, nous permet de préparer vos pièces sur mesure avant d'intervenir à bord.</p>
+      <div class="zone">
+        <div class="zone-label">Secteur d'intervention</div>
+        <div class="zone-line">Menton <i></i> Marseille</div>
+        <small>… et partout en France et à l'étranger sur demande.</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUES ============ -->
+<section class="brands" id="marques">
+  <div class="container">
+    <h2 class="reveal">Les marques que nous travaillons</h2>
+    <p class="lead reveal">Du matériel reconnu, choisi pour sa fiabilité en mer.</p>
+    <ul class="brand-list reveal">
+      <li>Harken</li>
+      <li>Seldén</li>
+      <li>Facnor</li>
+      <li>Profurl</li>
+      <li>Sparcraft</li>
+      <li>Wichard</li>
+      <li>Sta-Lok</li>
+      <li>Gottifredi Maffioli</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div class="reveal">
+      <div class="eyebrow">Contact</div>
+      <h2>Parlons de votre bateau</h2>
+      <p class="lead">Un devis, une question, une intervention urgente ? Appelez-nous ou écrivez-nous, nous vous répondons rapidement.</p>
+      <div class="contact-list">
+        <a class="contact-item" href="tel:+33493776562">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+          <div><small>Téléphone</small><span>+33 (0)4 93 77 65 62</span></div>
+        </a>
+        <a class="contact-item" href="tel:+33620303749">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+          <div><small>Mobile</small><span>+33 (0)6 20 30 37 49</span></div>
+        </a>
+        <a class="contact-item" href="mailto:denis@performance-greement.fr?subject=Demande%20de%20devis">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span>
+          <div><small>E-mail</small><span>denis@performance-greement.fr</span></div>
+        </a>
+        <a class="contact-item" href="https://www.google.fr/maps/place/Performance+Greement/@43.58791,6.9292182,16.5z/data=!4m5!3m4!1s0x12cc2804842c7cdf:0xbd7ca5422b945b79!8m2!3d43.5862674!4d6.9293634" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+          <div><small>Adresse</small><span>462 Chemin de l'Hôpital, 06580 Pégomas</span></div>
+        </a>
+      </div>
+    </div>
+    <div class="map-col reveal">
+      <div class="map">
+        <iframe title="Plan d'accès à Performance Gréement" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=43.5862674,6.9293634&z=14&output=embed"></iframe>
+      </div>
+      <a class="map-link" href="https://www.google.fr/maps/place/Performance+Greement/@43.58791,6.9292182,16.5z/data=!4m5!3m4!1s0x12cc2804842c7cdf:0xbd7ca5422b945b79!8m2!3d43.5862674!4d6.9293634" target="_blank" rel="noopener">Ouvrir l'itinéraire dans Google Maps →</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <span>© <span id="year">2026</span> Performance Gréement · Pégomas, Alpes-Maritimes</span>
+    <a href="#accueil">Retour en haut ↑</a>
+  </div>
+</footer>
+
+<a href="tel:+33493776562" class="call-fab" aria-label="Appeler Performance Gréement">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+</a>
+
+<script>
+  // Menu mobile
+  const burger = document.querySelector('.burger');
+  const nav = document.getElementById('nav');
+  burger.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }));
+
+  // Ombre de l'en-tête et bouton d'appel au défilement
+  const header = document.querySelector('.header');
+  const fab = document.querySelector('.call-fab');
+  const onScroll = () => {
+    header.classList.toggle('scrolled', window.scrollY > 10);
+    fab.classList.toggle('show', window.scrollY > window.innerHeight * 0.6);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Apparition des blocs
+  const io = 'IntersectionObserver' in window && new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
